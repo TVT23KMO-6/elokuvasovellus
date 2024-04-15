@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Groups from './pages/Groups';
+import Home from './pages/Home'
+import Movies from './pages/Movies';
+import NotFound from './pages/Notfound';
+import { Route, Routes} from 'react-router-dom';
+import Shows from './pages/Shows';
+import Favorite from './pages/Favorite';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Header></Header>
+    <Navbar></Navbar>
+    <div className='container'>
+    <Routes>
+        <Route path='/' exact element= {<Home />} />
+        <Route path='/groups' element= {<Groups />} />
+        <Route path='/movies' element= {<Movies />} />
+        <Route path='/shows' element= {<Shows />} />
+        <Route path='/favorites' element= {<Favorite />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </div>
+    <Footer></Footer>
+    </>
   );
 }
 
