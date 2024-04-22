@@ -4,7 +4,32 @@ const FinnkinoShows= () => {
     const [schedule, setSchedule] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const [selectedTheatre, setSelectedTheatre] = useState("Kaikki teatterit");
+    const [filteredSchedule, setFilteredSchedule] = useState([]);
     
+    const TheatreFilter = () => {
+        const theatres = ['Kaikki teatterit','Omena, Espoo', 'Sello, Espoo', 'Itis, Helsinki','Kinopalatsi, Helsinki','Maxim, Helsinki'
+        ,'Tennispalatsi, Helsinki','Flamingo, Vantaa','Fantasia, Jyväskylä','Scala, Kuopio','Kuvapalatsi, Lahti', 'Plaza, Oulu'];
+        
+        const handleChange = (event) => {
+            setSelectedTheatre(event.target.value);
+        };
+        
+        return (
+            <div>
+                <label htmlFor="theatreFilter"> Valitse Teatteri: </label>
+                <select id="theatreFilter" value={selectedTheatre} onChange={handleChange}>
+                    {theatres.map((theatre, index) => (
+                        <option key={index} value={theatre}> 
+                            {theatre}
+                        </option>
+                    ))}
+                </select>
+            </div>
+        );
+    };
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -33,13 +58,27 @@ const FinnkinoShows= () => {
         fetchData();
     }, []);
 
+    useEffect(() =>{
+        const filterSchedule = () => {
+            if (selectedTheatre === 'Kaikki teatterit') {
+                setFilteredSchedule(schedule);
+            } else {
+                const filtered = schedule.filter((show) => show.auditorium === selectedTheatre);
+                setFilteredSchedule(filtered);
+            }
+        };
+
+        filterSchedule();  
+    }, [selectedTheatre, schedule]);
+
     if (loading) return <p> Ladataan...</p>;
     if (error) return <p>Virhe: {error.message}</p>
 
     return (
         <div>
+            <TheatreFilter />
             <ul>
-                {schedule.map((show, index) => (
+                {filteredSchedule.map((show, index) => (
                     <li key={index}>
                         <h2> {show.title} </h2>
                         <p> Alkaa: {show.start} </p>
