@@ -1,7 +1,15 @@
 import React from 'react'
+import FinnkinoShows from '../FinnkinoShows'
 
 export default function Shows() {
   return (
-    <p> This is the Show page</p>
+    <div>
+      
+        <h1> Finnkino näytösaikataulu</h1>
+      
+      <main>
+        <FinnkinoShows/>
+      </main>
+    </div>
   )
 }
