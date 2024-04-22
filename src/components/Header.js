@@ -3,10 +3,10 @@ import './Header.css'
 
 export default function Header() {
   return (
-    <Header>
+    <header>
         <h1>
-            Header
+            Movie App
         </h1>
-    </Header>
-  )
+    </header>
+  );
 }
