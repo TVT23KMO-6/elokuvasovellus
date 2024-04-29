@@ -1,7 +1,5 @@
-// Navbar.js
-
 import React from 'react';
-import './Navbar.css'; // Import CSS file for styling
+import './Navbar.css'; 
 import { Link } from 'react-router-dom';
 import SignInForm from '../components/SignInForm'; // Import the SignInForm component
 

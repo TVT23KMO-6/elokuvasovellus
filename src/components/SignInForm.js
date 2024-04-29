@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SignInForm.css'; // Import CSS file for styling
+import './SignInForm.css'; 
 
 const SignInForm = () => {
   const [isSignInOpen, setIsSignInOpen] = useState(false); // State variable to control the visibility of the sign-in popup
