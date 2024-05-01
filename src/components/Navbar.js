@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -19,8 +19,11 @@ export default function Navbar() {
                 <li>
                     <Link to='/favorites'>Favorites</Link>
                 </li>
+                <li>
+                    <Link to='/movies'>Movies</Link>
+                </li>
             </ul>
         </div>
     </nav>
-  )
+  );
 }

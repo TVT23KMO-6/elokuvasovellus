@@ -4,10 +4,10 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Groups from './pages/Groups';
-import Home from './pages/Home'
+import Home from './pages/Home';
 import Movies from './pages/Movies';
 import NotFound from './pages/Notfound';
-import { Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Shows from './pages/Shows';
 import Favorite from './pages/Favorite';
 
