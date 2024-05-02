@@ -27,6 +27,7 @@ function App() {
         <Route path='/favorites' element= {<Favorite />} /> 
         <Route path='/login' element= {<LoginPage />} />
         <Route path='/signup' element= {<RegistrationPage />} />
+        
 
         <Route path='*' element={<NotFound />} />
       </Routes>

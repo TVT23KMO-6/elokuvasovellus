@@ -12,3 +12,9 @@ footer {
 footer p {
     color: var(--light-color);
 }
+
+#deleteButton {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}
