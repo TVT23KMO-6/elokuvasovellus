@@ -1,6 +1,7 @@
 import React from 'react'
 import FinnkinoShows from '../FinnkinoShows'
 
+
 export default function Shows() {
   return (
     <div>

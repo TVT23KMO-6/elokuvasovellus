@@ -14,11 +14,21 @@ export default function Navbar() {
                     <Link to='/shows'>Shows</Link>
                 </li>
                 <li>
+                    <Link to='/movies'>Movies</Link>
+                </li>
+                <li>
                     <Link to='/groups'>Groups</Link>
                 </li>
                 <li>
                     <Link to='/favorites'>Favorites</Link>
                 </li>
+                <li>
+                    <Link to='/login'>Log in</Link>
+                </li>
+                <li>
+                    <Link to='/signup'>Sign up</Link>
+                </li>
+
             </ul>
         </div>
     </nav>

@@ -1,0 +1,21 @@
+server:
+  port: 9090
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: create-drop
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://dpg-coohl1gl5elc739pout0-a.frankfurt-postgres.render.com:5432/moviedb_bv6v
+    username: joona
+    password: sYthbaem80M3zJyZnqfjLzQWU6wiiDIp
+    driver-class-name: org.postgresql.Driver
+
+
+
+
+  
+

@@ -10,6 +10,8 @@ import NotFound from './pages/Notfound';
 import { Route, Routes} from 'react-router-dom';
 import Shows from './pages/Shows';
 import Favorite from './pages/Favorite';
+import RegistrationPage from './pages/RegistrationPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -22,7 +24,10 @@ function App() {
         <Route path='/groups' element= {<Groups />} />
         <Route path='/movies' element= {<Movies />} />
         <Route path='/shows' element= {<Shows />} />
-        <Route path='/favorites' element= {<Favorite />} />
+        <Route path='/favorites' element= {<Favorite />} /> 
+        <Route path='/login' element= {<LoginPage />} />
+        <Route path='/signup' element= {<RegistrationPage />} />
+
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
