@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import 'react-router-dom';
+
 
 function LoginPage({ onLogin }) {
   const [username, setUsername] = useState('');
@@ -11,6 +13,7 @@ function LoginPage({ onLogin }) {
       const response = await axios.get(url);
       const userData = response.data;
       onLogin(userData);
+      window.location.href = '/home';
 
     } catch (error) {
       console.error('Login error:', error);
